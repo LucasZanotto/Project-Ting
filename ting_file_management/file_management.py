@@ -10,7 +10,7 @@ def txt_importer(path_file):
         return sys.stderr.write("Formato inválido")
     with open(path_file) as file:
         file_list = file.read().split("\n")
-        print(file_list)
+        # print(file_list)
         return file_list
 
 

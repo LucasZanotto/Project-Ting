@@ -24,9 +24,19 @@ if __name__ == "__main__":
     process("statics/arquivo_teste.txt", project)
 
 
-def remove(instance):
-    """Aqui irá sua implementação"""
+def remove(instance: Queue):
+    if len(instance) == 0:
+        sys.stdout.write("Não há elementos\n")
+        return None
+    path_file = instance.search(0)["nome_do_arquivo"]
+    instance.dequeue()
+    sys.stdout.write(f"""Arquivo {path_file} removido com sucesso\n""")
 
 
 def file_metadata(instance, position):
-    """Aqui irá sua implementação"""
+    if len(instance) < position:
+        sys.stderr.write("Posição inválida\n")
+        return None
+    path_file = instance.search(position)
+    instance.dequeue()
+    sys.stdout.write(str(path_file))
