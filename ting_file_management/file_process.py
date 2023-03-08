@@ -19,9 +19,9 @@ def process(path_file, instance: Queue):
     sys.stdout.write(str(dict_padrao))
 
 
-if __name__ == "__main__":
-    project = Queue()
-    process("statics/arquivo_teste.txt", project)
+# if __name__ == "__main__":
+#     project = Queue()
+#     process("statics/arquivo_teste.txt", project)
 
 
 def remove(instance: Queue):
